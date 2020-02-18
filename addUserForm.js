@@ -1,6 +1,6 @@
 export class addUserForm {
-    constructor(name) {
-        this.name = name;
+    constructor() {
+
         this.form = document.querySelector("form.user-add-form");
         this.firstName = document.querySelector("input#fname");
         this.lastName = document.querySelector("input#lname");
@@ -8,23 +8,26 @@ export class addUserForm {
         this.phone = document.querySelector("input#tel");
         this.validationContener = document.querySelector(".validation");
         this.sendform();
-        this.insertCustomer();
-        this.validationForm();
+        // this.insertCustomer();
+        // this.validationForm();
     }
     //send new user data to server
     sendform() {
+        console.log('form');
         this.form.addEventListener("submit", e => {
             e.preventDefault();
             // check if typed user already exist
-            if (this.validationForm(this.firstName, this.lastName, this.email, this.phone)) {
-                fetch(`http://localhost:3000/users?first_name=${firstName.value}&last_name=${lastName.value}&e_mail=${email.value}&tel=${phone.value}`, {})
+            console.log('submit');
+            if (this.validationForm()) {
+                console.log('isValid');
+                fetch(`http://localhost:3000/users?first_name=${this.firstName.value}&last_name=${this.lastName.value}&e_mail=${this.email.value}&tel=${this.phone.value}`, {})
                     .then(response => {
                         return response.json();
                     })
                     .then(response => {
                         // if response 
                         if (response.length == 0) {
-                            insertCustomer(firstName, lastName, email, phone);
+                            this.insertCustomer();
                             this.form.reset();
                             this.validationContener.style.display = "none";
                         }
@@ -40,33 +43,31 @@ export class addUserForm {
             }
         });
     }
-    ;
+
     insertCustomer() {
-        (firstName, lastName, email, phone) => {
-            const time = new Date();
+        const time = new Date();
             fetch("http://localhost:3000/users", {
                 headers: { "Content-Type": "application/json; charset=utf-8" },
                 method: "POST",
                 body: JSON.stringify({
-                    first_name: `${firstName.value}`,
-                    last_name: `${lastName.value}`,
-                    e_mail: `${email.value}`,
-                    tel: `${phone.value}`,
+                    first_name: `${this.firstName.value}`,
+                    last_name: `${this.lastName.value}`,
+                    e_mail: `${this.email.value}`,
+                    tel: `${this.phone.value}`,
                     dateJoin: `${time}`
                 })
             });
-        };
+    
     }
     validationForm() {
-        (firstName, lastName, email, phone) => {
-            if (firstName.value.length > 0 &&
-                lastName.value.length > 0 &&
-                email.value.length > 0 &&
-                phone.value > 0) {
+
+            if (this.firstName.value.length > 0 &&
+                this.lastName.value.length > 0 &&
+                this.email.value.length > 0 &&
+                this.phone.value.length > 0) { // wcześniej sprawdzales this.phone.valuu > 0, z formularza zawsze jest string wiec to nie dzialalo!
                 return true;
             }
             return false;
-        };
     }
 }
 
