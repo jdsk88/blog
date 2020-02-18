@@ -4,22 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
   </head>
   <body>
     <div id="root"></div>
-    <div class="container">
-      <div class="validation"></div>
-      <form class="user-add-form">
-        <input id="fname" type="text" placeholder="First Name" />
-        <input id="lname" type="text" placeholder="Last Name" />
-        <input id="email" type="text" placeholder="e-mail" />
-        <input id="tel" type="number" placeholder="Phone number" />
-        <button type="submit">register user</button>
+    <!-- .container>form.user-add-form>label.form-label{SIGN
+    UP}+input#uname+input#passwd+input#passwdck+input#fname+input#lname+input#email+input#phone+label.sort+select.sort>option*3^input#check-box -->
+    <!-- <div class="container">
+      <label for="form" class="form-label">SIGN UP</label>
+      <form class="user-add-form col">
+        <label for="uname" class="form-label">User Name</label>
+        <input
+          class="form-control"
+          name="uname"
+          placeholder="enter your user name"
+          type="text"
+          id="uname"
+        />
+        <label for="passwd" class="form-label">Password</label>
+        <input
+          class="form-control"
+          name="passwd"
+          placeholder="enter password"
+          type="password"
+          id="passwd"
+        />
+        <label for="passwd" class="form-label">Password confirm</label>
+        <input
+          class="form-control"
+          name="passwd"
+          placeholder="enter password again"
+          type="password"
+          id="passwd-confirm"
+        />
+        <label for="fname" class="form-label">First Name</label>
+        <input
+          class="form-control"
+          name="fname"
+          placeholder="enter your first name"
+          type="text"
+          id="fname"
+        />
+        <label for="lname" class="form-label">Last Name</label>
+        <input
+          class="form-control"
+          name="lname"
+          placeholder="enter your last name"
+          type="text"
+          id="lname"
+        />
+        <label for="email" class="form-label">E-Mail</label>
+        <input
+          class="form-control"
+          name="email"
+          placeholder="enter your email"
+          type="email"
+          id="email"
+        />
+        <label for="phone" class="form-label">Mobile Number</label>
+        <input
+          class="form-control"
+          name="phone"
+          placeholder="enter your mobile number"
+          type="tel"
+          id="phone"
+        />
+        <label for="sort" class="sort"></label>
+        <select class="form-control" name="sort" id="sort" class="sort">
+          <option value="rwd">Resposive</option>
+          <option value="static">Static</option>
+          <option value="old">Old fasion</option>
+        </select>
+        <input class="form-control" type="radio" />
+        <button type="submit" class="btn btn-success btn-sm">register</button>
       </form>
-    </div>
-    <button type="submit">delete user</button>
-    <!-- <script src="http://localhost:3002/require-browser.js"></script> -->
-    <script type="module" src="./index.js"></script>
+
+      <div class="validation"></div>
+    </div> -->
+
+    <div class="my-container">
+      <form class="user-add-form">
+        <div class="form-header">SIGN UP!</div>
+        <input class="input" id="uname" type="text" placeholder="User Name" />
+        <input class="input" id="passwd" type="password" placeholder="Password" />
+        <input class="input" id="fname" type="text" placeholder="First Name" />
+        <input class="input" id="lname" type="text" placeholder="Last Name" />
+        <input class="input" id="email" type="email" placeholder="e-mail" />
+        <input class="input" id="tel" type="tel" placeholder="Phone number" />
+        <label class="form-header" for="sort">Choose default view</label>
+        <select class="form-header" id="select" name="sort">
+          <option value="desktop">Desktop view</option>
+          <option value="mobile">Mobile view</option>
+        </select>
+        <button class="btn btn-sm btn-success" type="submit">register user</button>
+        <button class="btn btn-sm btn-warning" type="submit">delete user</button>
+      </form>
+      <div class="validation"></div>
+  </div>
+    <!-- <div class="container">
+  <form class="user-add-form">
+		<h2>Register</h2>
+		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+			<div class="row">
+				<div class="col-xs-6"><input id="fname" type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+				<div class="col-xs-6"><input id="lname" type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+			</div>        	
+        </div>
+        <div class="form-group">
+        	<input id="email" type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+        	<input id="phone" type="tel" class="form-control" name="phone" placeholder="Mobile phone number" required="required">
+        </div>
+        <div class="form-group">
+        	<input id="uname" type="text" class="form-control" name="user_name" placeholder="User Name" required="required">
+        </div>
+		<div class="form-group">
+            <input id="passwd" type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input id="passwd-confirm" type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>        
+        <div class="form-group">
+			<label class="checkbox-inline"><input id="terms-accept" type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+    </form>
+    <div class="validation"></div>
+  </div> -->
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "user_name": "",
+      "password": "",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Tue Feb 18 2020 22:25:54 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 1
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Tue Feb 18 2020 22:26:01 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 2
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "ndgnkdgad",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Tue Feb 18 2020 22:26:10 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 3
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "123455",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Tue Feb 18 2020 22:26:16 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 4
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "hhhhhh",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Tue Feb 18 2020 22:30:50 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 5
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "ASD",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Tue Feb 18 2020 23:26:30 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 6
+    }
+  ],
+  "articles": [],
+  "comments": [],
+  "settings": []
+}
