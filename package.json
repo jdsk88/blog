@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server",
+    "browser": "npx require-browser",
+    "api": "json-server --watch data.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,5 +15,14 @@
   },
   "author": "Maciej Jakobszy",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/maciejjakobszy/blog#readme"
+  "homepage": "https://bitbucket.org/maciejjakobszy/blog#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "browserify": "^16.5.0",
+    "date-and-time": "^0.12.0",
+    "http-server": "^0.12.1",
+    "json-server": "^0.16.0",
+    "node-fetch": "^2.6.0",
+    "require-browser": "^0.1.4"
+  }
 }
