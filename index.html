@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
     <div id="root"></div>
-    <form class="user-add-form">
+    <div class="container">
+      <div class="validation"></div>
+      <form class="user-add-form">
         <input id="fname" type="text" placeholder="First Name" />
         <input id="lname" type="text" placeholder="Last Name" />
         <input id="email" type="text" placeholder="e-mail" />
         <input id="tel" type="number" placeholder="Phone number" />
         <button type="submit">register user</button>
-    </form>
-    <button type="submit">delete user </button>
+      </form>
+    </div>
+    <button type="submit">delete user</button>
     <script src="http://localhost:3002/require-browser.js"></script>
-    <script type="module" src="/index.js"></script>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>
