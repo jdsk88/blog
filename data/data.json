@@ -1,62 +1,105 @@
 {
+  "posts": [
+    {
+      "id": 100,
+      "title": "Man must explore, and this is exploration at its greatest",
+      "subtitle": "Problems look mighty small from 150 miles up",
+      "userId": 1,
+      "date": "2019-09-23T22:00:00.000Z",
+      "last_update": "2019-09-23T22:00:00.000Z",
+      "key_words": "AMERICA",
+      "likes": 100,
+      "displays_q": 359,
+      "body": ""
+    },
+    {
+      "id": 101,
+      "title": "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
+      "subtitle": "",
+      "userId": 1,
+      "date": "2019-09-17T22:00:00.000Z",
+      "last_update": "2019-09-23T22:00:00.000Z",
+      "key_words": "AMERICA",
+      "likes": 100,
+      "displays_q": 359,
+      "body": ""
+    },
+    {
+      "id": 102,
+      "title": "Science has not yet mastered prophecy",
+      "subtitle": "We predict too much for the next year and yet far too little for the next ten.",
+      "userId": 1,
+      "date": "2019-08-23T22:00:00.000Z",
+      "last_update": "2019-09-23T22:00:00.000Z",
+      "key_words": "AMERICA",
+      "likes": 100,
+      "displays_q": 359,
+      "body": ""
+    },
+    {
+      "id": 103,
+      "title": "Failure is not an option",
+      "subtitle": "Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
+      "userId": 1,
+      "date": "2019-07-07T22:00:00.000Z",
+      "last_update": "2019-09-23T22:00:00.000Z",
+      "key_words": "AMERICA",
+      "likes": 100,
+      "displays_q": 359,
+      "body": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": 100,
+      "postId": 100,
+      "userId": 1,
+      "user_name": "john_doe",
+      "body": "How do you like my post?",
+      "date": "2019-10-23T22:00:00.000Z"
+    }
+  ],
   "users": [
     {
       "user_name": "jdsk88",
-      "password": "asdf",
-      "first_name": "Maciej",
-      "last_name": "Jakobszy",
-      "e_mail": "maciejjakobszy@me.com",
-      "tel": "575671112",
-      "dateJoin": "Wed Feb 19 2020 13:55:00 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "password": "asd",
+      "first_name": "a",
+      "last_name": "a",
+      "e_mail": "a@a.pl",
+      "tel": "1222",
+      "dateJoin": "Wed Feb 19 2020 16:45:18 GMT+0100 (czas środkowoeuropejski standardowy)",
       "default_view": "responsive",
       "id": 1
     },
     {
-      "user_name": "dwdwdw",
-      "password": "dwdw",
-      "first_name": "wdwdw",
-      "last_name": "dw",
-      "e_mail": "maciek@wp.pl",
-      "tel": "dwdwdwdw",
-      "dateJoin": "Wed Feb 19 2020 13:57:09 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "user_name": "jdsk88",
+      "password": "as",
+      "first_name": "as",
+      "last_name": "as",
+      "e_mail": "as@as.pl",
+      "tel": "123",
+      "dateJoin": "Wed Feb 19 2020 16:45:38 GMT+0100 (czas środkowoeuropejski standardowy)",
       "default_view": "responsive",
       "id": 2
     },
     {
-      "user_name": "gdgdgdbbbbb",
-      "password": "gfg",
-      "first_name": "fg",
-      "last_name": "bfb",
-      "e_mail": "fbfb@wp.pl",
-      "tel": "fbfbfbfb",
-      "dateJoin": "Wed Feb 19 2020 13:57:42 GMT+0100 (czas środkowoeuropejski standardowy)",
-      "default_view": "responsive",
-      "id": 3
-    },
-    {
-      "user_name": "asdf",
-      "password": "asdf",
-      "first_name": "asdf",
-      "last_name": "asdf",
-      "e_mail": "asd2@11.pl",
-      "tel": "123455",
-      "dateJoin": "Wed Feb 19 2020 14:04:51 GMT+0100 (czas środkowoeuropejski standardowy)",
-      "default_view": "native",
-      "id": 4
-    },
-    {
       "user_name": "jdsk88",
-      "password": "aaaaa",
-      "first_name": "1222",
-      "last_name": "12222",
-      "e_mail": "sjs@ff.pl",
-      "tel": "Egzil",
-      "dateJoin": "Wed Feb 19 2020 14:25:12 GMT+0100 (czas środkowoeuropejski standardowy)",
-      "default_view": "responsive",
-      "id": 5
+      "password": "asd",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Wed Feb 19 2020 18:14:24 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "default_view": "oldest",
+      "id": 3
     }
   ],
-  "articles": [],
-  "comments": [],
-  "settings": []
+  "likes": [
+    {
+      "postId": 100,
+      "type": "LIKE",
+      "userId": 1,
+      "username": "Admin"
+    }
+  ]
 }

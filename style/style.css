@@ -8,6 +8,34 @@ body {
     flex-direction: column;
     justify-content: stretch;
 }
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100px;
+}
+button#UserFormToggle{
+    background: blue;
+    /* background-image: url("/data/img/add-user.png"); */
+    width: 75px;
+    height: 75px;
+    font-size: 10px;
+}
+button#UserFormToggle>img{
+    width: 60%;
+    height: 60%;
+}
+button#UserFormToggle>p{
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 30px;
+}
+
+form.user-add-form{
+    display:none;
+}
 /* .form-header{
     width: 100%;
     height: 20%;

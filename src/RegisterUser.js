@@ -12,6 +12,8 @@ export class RegisterUser {
     this.validationContener = document.querySelector(".validation");
     this.sendform();
     this.error = "";
+    this.addUserFormBtn = document.querySelector("button#UserFormToggle");
+    this.userFormBtnToggle();
     // this.userNameValidator();
     // this.passwordValidationForm();
   }
@@ -31,7 +33,7 @@ export class RegisterUser {
           .then(response => {
             return response.json();
           })
-          
+
           .then(response => {
             // if response = nothing
             if (response.length == 0) {
@@ -74,14 +76,26 @@ export class RegisterUser {
         default_view: `${this.select.value}`
       })
     });
-    console.log("Uzytkowniki o danych : ");
-    console.log(this.userName.value);
-    console.log(this.passwd.value);
-    console.log(this.firstName.value);
-    console.log(this.lastName.value);
-    console.log(this.email.value);
-    console.log(this.phone.value);
-    console.log("został zarejsetwowany w bazie ");
+    console.log(`
+     insertCustomer() user add post-request
+    ----------------------------------------
+    |--------------COMPLETE----------------|
+    ----------------------------------------
+      User name    :   ${this.userName.value}
+    ----------------------------------------
+      Password     :   ${this.passwd.value}  
+    ----------------------------------------
+      First name   :   ${this.firstName.value}
+    ----------------------------------------
+      Last name    :   ${this.lastName.value}
+    ----------------------------------------
+      e-mail       :   ${this.email.value}   
+    ----------------------------------------
+      Phone        :   ${this.phone.value}   
+    ----------------------------------------
+      Default view :   ${this.select.value}  
+    ----------------------------------------
+    `);
   }
   validationForm() {
     let emptyFields = false;
@@ -92,18 +106,18 @@ export class RegisterUser {
       this.passwd.value.length > 0 &&
       this.firstName.value.length > 0 &&
       this.lastName.value.length > 0 &&
-      this.email.value.length > 0 &&       
-      this.phone.value.length > 0 
+      this.email.value.length > 0 &&
+      this.phone.value.length > 0
     ) {
       emptyFields = true;
       this.error = "empty fields";
     } else {
-    emptyFields = false;
-    this.error = "";
+      emptyFields = false;
+      this.error = "";
     }
 
-    if(this.passwordValidationForm()){
-      passwordMatch= true;
+    if (this.passwordValidationForm()) {
+      passwordMatch = true;
       this.error = "";
     } else {
       passwordMatch = false;
@@ -111,13 +125,35 @@ export class RegisterUser {
     }
 
     return emptyFields && passwordMatch ? true : false;
-
   }
   passwordValidationForm() {
     if (this.passwd.value === this.passwdValid.value) {
       return true;
     }
     return false;
+  }
+
+  // userFormBtnToggle() {
+  //   if (this.addUserFormBtn.addEventListener("click", event)) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+
+  userFormBtnToggle() {
+    this.addUserFormBtn.addEventListener("click", event => {
+      if (this.form.style.display == "block") {
+        console.log("menu is close", event)
+        this.form.style.display = "none";
+        this.addUserFormBtn.style.background = "blue";
+        
+      } else {
+        console.log("menu is open", event)
+        this.form.style.display = "block";
+        this.addUserFormBtn.style.background = "red";
+    
+      }
+    });
   }
 }
 
