@@ -59,6 +59,38 @@
       "tel": "575671112",
       "dateJoin": "Tue Feb 18 2020 23:26:30 GMT+0100 (czas środkowoeuropejski standardowy)",
       "id": 6
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "aaaaa",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Wed Feb 19 2020 10:52:59 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "id": 7
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "abcf",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Wed Feb 19 2020 11:02:29 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "default_view": "static",
+      "id": 8
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "as",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Wed Feb 19 2020 11:03:12 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "default_view": "responsive",
+      "id": 9
     }
   ],
   "articles": [],

@@ -7,6 +7,8 @@ export class addUserForm {
     this.phone = document.querySelector("input#tel");
     this.userName = document.querySelector("input#uname");
     this.passwd = document.querySelector("input#passwd");
+    this.select = document.querySelector("select#select");
+
     this.validationContener = document.querySelector(".validation");
     this.sendform();
   }
@@ -63,7 +65,8 @@ export class addUserForm {
         last_name: `${this.lastName.value}`,
         e_mail: `${this.email.value}`,
         tel: `${this.phone.value}`,
-        dateJoin: `${time}`
+        dateJoin: `${time}`,
+        default_view: `${this.select.value}`
       })
     });
     console.log("Uzytkowniki o danych : ");
