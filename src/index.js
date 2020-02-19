@@ -1,6 +1,6 @@
-import { addUserForm } from './addUserForm.js'
+import { RegisterUser } from './RegisterUser.js'
 
 window.addEventListener("load", event => {
-let form = new addUserForm();
+let form = new RegisterUser();
 });
 
