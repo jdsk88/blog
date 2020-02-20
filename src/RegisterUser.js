@@ -11,7 +11,7 @@ export class RegisterUser {
     this.select = document.querySelector("select#select");
     this.validationContener = document.querySelector(".validation");
     this.sendform();
-    this.error = "";
+    this.errors = [];
     this.addUserFormBtn = document.querySelector("button#UserFormToggle");
     this.userFormBtnToggle();
     // this.userNameValidator();
@@ -24,6 +24,7 @@ export class RegisterUser {
       e.preventDefault();
       // check typed user is already exist
       console.log("submit");
+      this.showLoader();
       if (this.validationForm()) {
         // fetch(`http://localhost:3000/users?user_name=${this.userName.value}`,{})
         fetch(
@@ -52,12 +53,29 @@ export class RegisterUser {
               this.validationContener.style.display = "block";
               this.validationContener.innerText = "Uzytkownik juz istnieje!";
             }
+            this.hideLoader();
           });
       } else {
-        this.validationContener.style.display = "block";
-        this.validationContener.innerText = this.error;
+        if (this.errors.length > 0) {
+          this.validationContener.style.display = "block";
+          this.validationContener.innerHTML = "";
+          this.errors.forEach(error => {
+            const div = document.createElement("div");
+            div.innerText = error;
+            this.validationContener.appendChild(div);
+          });
+          this.hideLoader();
+        }
       }
     });
+  }
+
+  showLoader (){
+
+  }
+
+  hideLoader() {
+
   }
 
   insertCustomer() {
@@ -100,7 +118,7 @@ export class RegisterUser {
   validationForm() {
     let emptyFields = false;
     let passwordMatch = false;
-    this.error = "";
+    this.errors = [];
     if (
       this.userName.value.length > 0 &&
       this.passwd.value.length > 0 &&
@@ -110,18 +128,16 @@ export class RegisterUser {
       this.phone.value.length > 0
     ) {
       emptyFields = true;
-      this.error = "empty fields";
     } else {
+      this.errors.push("empty fields");
       emptyFields = false;
-      this.error = "";
     }
 
     if (this.passwordValidationForm()) {
       passwordMatch = true;
-      this.error = "";
     } else {
       passwordMatch = false;
-      this.error = "password";
+      this.errors.push("password");
     }
 
     return emptyFields && passwordMatch ? true : false;
@@ -143,17 +159,14 @@ export class RegisterUser {
   userFormBtnToggle() {
     this.addUserFormBtn.addEventListener("click", event => {
       if (this.form.style.display == "block") {
-        console.log("menu is close", event)
+        console.log("menu is close", event);
         this.form.style.display = "none";
         this.addUserFormBtn.style.background = "blue";
-        
       } else {
-        console.log("menu is open", event)
+        console.log("menu is open", event);
         this.form.style.display = "block";
         this.addUserFormBtn.style.background = "red";
-    
       }
     });
   }
 }
-

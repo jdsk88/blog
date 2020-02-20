@@ -92,6 +92,39 @@
       "dateJoin": "Wed Feb 19 2020 18:14:24 GMT+0100 (czas środkowoeuropejski standardowy)",
       "default_view": "oldest",
       "id": 3
+    },
+    {
+      "user_name": "fdfe",
+      "password": "a",
+      "first_name": "dwd",
+      "last_name": "wdw",
+      "e_mail": "s@wp.pl",
+      "tel": "3",
+      "dateJoin": "Thu Feb 20 2020 10:28:27 GMT+0100 (Central European Standard Time)",
+      "default_view": "oldest",
+      "id": 4
+    },
+    {
+      "user_name": "fefef",
+      "password": "a",
+      "first_name": "fef",
+      "last_name": "fefe",
+      "e_mail": "fefe@wp.pl",
+      "tel": "ffefefef",
+      "dateJoin": "Thu Feb 20 2020 10:31:41 GMT+0100 (Central European Standard Time)",
+      "default_view": "oldest",
+      "id": 5
+    },
+    {
+      "user_name": "a",
+      "password": "a",
+      "first_name": "d",
+      "last_name": "f",
+      "e_mail": "fefe@wp.pl",
+      "tel": "d",
+      "dateJoin": "Thu Feb 20 2020 10:32:01 GMT+0100 (Central European Standard Time)",
+      "default_view": "oldest",
+      "id": 6
     }
   ],
   "likes": [
