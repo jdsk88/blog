@@ -1,9 +1,9 @@
 export class Article {
 
-    constructor(selector){
-        this.el = document.querySelector(selector)
+    constructor(){
+        this.el = document.querySelector('#postList')
         this.posts = []
-        if (!this.el) { throw Error('NO POSTS' + selector) }
+        if (!this.el) { throw Error('NO POSTS') }
     }
 
     loadPosts(posts){

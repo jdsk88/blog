@@ -10,6 +10,7 @@ export class RegisterUser {
     this.passwdValid = document.querySelector("input#passwdValid");
     this.select = document.querySelector("select#select");
     this.validationContener = document.querySelector(".validation");
+    this.loader = document.querySelector("#loader");
     this.sendform();
     this.errors = [];
     this.addUserFormBtn = document.querySelector("button#UserFormToggle");
@@ -71,11 +72,11 @@ export class RegisterUser {
   }
 
   showLoader (){
-
+this.loader.style.display = "inline-block";
   }
 
   hideLoader() {
-
+    this.loader.style.display = "none";
   }
 
   insertCustomer() {
@@ -162,10 +163,12 @@ export class RegisterUser {
         console.log("menu is close", event);
         this.form.style.display = "none";
         this.addUserFormBtn.style.background = "blue";
+        this.addUserFormBtn.style.transform =  "rotate(0.0turn)";
       } else {
         console.log("menu is open", event);
         this.form.style.display = "block";
         this.addUserFormBtn.style.background = "red";
+        this.addUserFormBtn.style.transform =  "skew(30deg, 20deg)";
       }
     });
   }

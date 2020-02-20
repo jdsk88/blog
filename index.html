@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./style/style.css" />
+    
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,16 +19,14 @@
   <body>
     <div id="root">
       <div class="navbar">
-        <button
-          id="UserFormToggle"
-          class="btn btn-sm btn-primary"
-          value="sign up"
-        >
-          
-            <img src="/data/img/add-user.png" alt="" />
-            <p>Add User</p>
+        <button id="UserFormToggle" class="" value="sign up">
+          <img src="/data/img/add-user.png" alt="" />
+          <p>Add User</p>
         </button>
       </div>
+
+      
+      
 
       <div class="my-container">
         <form class="user-add-form">
@@ -60,11 +59,31 @@
             <option value="oldest">Oldest posts</option>
             <option value="latest">Latest posts</option>
           </select>
-          <button class="btn btn-sm" type="submit">register user</button>
+          <button class="btn btn-sm btn-success" type="submit">
+            register user
+          </button>
         </form>
         <div class="validation"></div>
       </div>
+
+
+      <div id="user"></div>
+      <div id="postsList"></div>
+
+      <!-- loader -->
+      <div id="loader" class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!-- loader -->
     </div>
     <script type="module" src="./src/index.js"></script>
+    <script src="https://kit.fontawesome.com/4b54ef35a5.js" crossorigin="anonymous"></script>
   </body>
 </html>
