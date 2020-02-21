@@ -15,8 +15,6 @@ export class RegisterUser {
     this.errors = [];
     this.addUserFormBtn = document.querySelector("button#UserFormToggle");
     this.userFormBtnToggle();
-    // this.userNameValidator();
-    // this.passwordValidationForm();
   }
   //send new user data to server
   sendform() {
@@ -27,7 +25,6 @@ export class RegisterUser {
       console.log("submit");
       this.showLoader();
       if (this.validationForm()) {
-        // fetch(`http://localhost:3000/users?user_name=${this.userName.value}`,{})
         fetch(
           `http://localhost:3000/users?user_name=${this.userName.value}&password=${this.passwd.value}&first_name=${this.firstName.value}&last_name=${this.lastName.value}&e_mail=${this.email.value}&tel=${this.phone.value}`,
           {}
@@ -45,11 +42,8 @@ export class RegisterUser {
             } else {
               console.log("Uzytkownik o danych:");
               console.log(this.userName.value);
-              // console.log(this.passwd.value);
               console.log(this.firstName.value);
               console.log(this.lastName.value);
-              // console.log(this.email.value);
-              // console.log(this.phone.value);
               console.log("jest zarejestrowany w bazie ");
               this.validationContener.style.display = "block";
               this.validationContener.innerText = "Uzytkownik juz istnieje!";
@@ -160,16 +154,61 @@ this.loader.style.display = "inline-block";
   userFormBtnToggle() {
     this.addUserFormBtn.addEventListener("click", event => {
       if (this.form.style.display == "block") {
-        console.log("menu is close", event);
+        console.log("user add form is close", event);
         this.form.style.display = "none";
         this.addUserFormBtn.style.background = "blue";
-        this.addUserFormBtn.style.transform =  "rotate(0.0turn)";
+        this.validationContener.style.display = "none";
+        // this.addUserFormBtn.style.transform =  "rotate(0.0turn)";
       } else {
-        console.log("menu is open", event);
+        console.log("user add form is open", event);
         this.form.style.display = "block";
         this.addUserFormBtn.style.background = "red";
-        this.addUserFormBtn.style.transform =  "skew(30deg, 20deg)";
+        // this.addUserFormBtn.style.transform =  "skew(30deg, 20deg)";
       }
     });
   }
+
+  render() {
+    const addUserForm = document.createElement('div');
+    addUserForm.innerHTML = `<div class="container">
+      <form class="user-add-form">
+        <div class="form-header">SIGN UP!</div>
+        <input class="input" id="uname" type="text" placeholder="User Name" />
+        <!-- <input class="input" id="passwd" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/> -->
+        <input
+          class="input"
+          id="passwd"
+          type="password"
+          placeholder="Password"
+        />
+        <input
+          class="input"
+          id="passwdValid"
+          type="password"
+          placeholder="Password validation"
+        />
+        <input
+          class="input"
+          id="fname"
+          type="text"
+          placeholder="First Name"
+        />
+        <input class="input" id="lname" type="text" placeholder="Last Name" />
+        <input class="input" id="email" type="email" placeholder="e-mail" />
+        <input class="input" id="tel" type="tel" placeholder="Phone number" />
+        <label class="form-header" for="sort">Choose default view</label>
+        <select class="form-header" id="select" name="sort">
+          <option value="oldest">Oldest posts</option>
+          <option value="latest">Latest posts</option>
+        </select>
+        <button class="btn btn-sm btn-success" type="submit">
+          register user
+        </button>
+      </form>
+      <div class="validation"></div>
+    </div>`;
+    this.addUserForm.appendChild(addUserForm);
+  }
+
+
 }

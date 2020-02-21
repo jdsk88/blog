@@ -191,6 +191,17 @@
       "dateJoin": "Thu Feb 20 2020 12:10:35 GMT+0100 (czas środkowoeuropejski standardowy)",
       "default_view": "oldest",
       "id": 12
+    },
+    {
+      "user_name": "jdsk88",
+      "password": "kkk",
+      "first_name": "Maciej",
+      "last_name": "Jakobszy",
+      "e_mail": "maciejjakobszy@me.com",
+      "tel": "575671112",
+      "dateJoin": "Thu Feb 20 2020 22:17:56 GMT+0100 (czas środkowoeuropejski standardowy)",
+      "default_view": "oldest",
+      "id": 13
     }
   ],
   "likes": [

@@ -36,12 +36,11 @@ export class User {
       !this.avatar ||
       !this.id
     ) {
-      throw Error("User lost content");
+      throw Error("User data lost");
     }
   }
   render() {
     const user = document.createElement("div");
-    user.classList.add("users");
     user.innerHTML = `
     <div class="container">
   <div class="card">
@@ -63,15 +62,7 @@ export class User {
       </div>
     </div>
 </div>
-</div>
-
-`
-    
-    
-    
-    
-    
-    ;
+</div>`;
     this.user.appendChild(user);
   }
 }

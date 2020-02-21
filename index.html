@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>blog</title>
+    <!-- my css styles -->
     <link rel="stylesheet" type="text/css" href="./style/style.css" />
-    
-    <link
+    <link rel="stylesheet" type="text/css" href="./style/loader.css" />
+    <link rel="stylesheet" type="text/css" href="./style/user-cart.css" />
+    <link rel="stylesheet" type="text/css" href="./style/navbar-module.css" />
+    <!-- bootstrap css styles -->
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="./node_modules/bootstrap/dist/css/bootstrap.css"
@@ -14,76 +18,102 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
+    /> -->
   </head>
   <body>
     <div id="root">
       <div class="navbar">
         <button id="UserFormToggle" class="" value="sign up">
-          <img src="/data/img/add-user.png" alt="" />
-          <p>Add User</p>
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
         </button>
       </div>
 
-      
-      
+      <div id="appFrame" class="app-frame">
+        <div class="container">
+          <form class="user-add-form">
+            <div class="form-header">SIGN UP!</div>
+            <input
+              class="input"
+              id="uname"
+              type="text"
+              placeholder="User Name"
+            />
+            <!-- <input class="input" id="passwd" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/> -->
+            <input
+              class="input"
+              id="passwd"
+              type="password"
+              placeholder="Password"
+            />
+            <input
+              class="input"
+              id="passwdValid"
+              type="password"
+              placeholder="Password validation"
+            />
+            <input
+              class="input"
+              id="fname"
+              type="text"
+              placeholder="First Name"
+            />
+            <input
+              class="input"
+              id="lname"
+              type="text"
+              placeholder="Last Name"
+            />
+            <input class="input" id="email" type="email" placeholder="e-mail" />
+            <input
+              class="input"
+              id="tel"
+              type="tel"
+              placeholder="Phone number"
+            />
+            <label class="form-header" for="sort">Choose default sorting</label>
+            <select class="form-header" id="select" name="sort">
+              <option value="oldest">Oldest posts</option>
+              <option value="latest">Latest posts</option>
+            </select>
+            <button class="btn btn-sm btn-success" type="submit">
+              register user
+            </button>
+          </form>
+          <div class="validation"></div>
+          <!-- loader -->
+          <div id="loader" class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <!-- loader -->
+        </div>
 
-      <div class="my-container">
-        <form class="user-add-form">
-          <div class="form-header">SIGN UP!</div>
-          <input class="input" id="uname" type="text" placeholder="User Name" />
-          <!-- <input class="input" id="passwd" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/> -->
-          <input
-            class="input"
-            id="passwd"
-            type="password"
-            placeholder="Password"
-          />
-          <input
-            class="input"
-            id="passwdValid"
-            type="password"
-            placeholder="Password validation"
-          />
-          <input
-            class="input"
-            id="fname"
-            type="text"
-            placeholder="First Name"
-          />
-          <input class="input" id="lname" type="text" placeholder="Last Name" />
-          <input class="input" id="email" type="email" placeholder="e-mail" />
-          <input class="input" id="tel" type="tel" placeholder="Phone number" />
-          <label class="form-header" for="sort">Choose default view</label>
-          <select class="form-header" id="select" name="sort">
-            <option value="oldest">Oldest posts</option>
-            <option value="latest">Latest posts</option>
-          </select>
-          <button class="btn btn-sm btn-success" type="submit">
-            register user
-          </button>
-        </form>
-        <div class="validation"></div>
+        <div id="addUserForm"></div>
+        <div id="user"></div>
+        <div id="article"></div>
+        <div id="comment"></div>
+        <div id="articleSettings"></div>
       </div>
 
-
-      <div id="user"></div>
-      <div id="postsList"></div>
-
-      <!-- loader -->
-      <div id="loader" class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <!-- loader -->
+      <div id="navbar-bottom"></div>
     </div>
     <script type="module" src="./src/index.js"></script>
-    <script src="https://kit.fontawesome.com/4b54ef35a5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4b54ef35a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+      integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/node_modules/date-and-time/date-and-time.js"></script>
   </body>
 </html>
