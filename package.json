@@ -17,7 +17,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/maciejjakobszy/blog#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "browserify": "^16.5.0",
     "date-and-time": "^0.12.0",
